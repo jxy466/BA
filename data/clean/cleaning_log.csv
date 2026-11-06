@@ -1,0 +1,14 @@
+table,issue,count,action
+orders,order_id 重复,0,删除重复主键
+orders,购买时间为空,0,删除缺失购买时间行
+orders,送达时间早于购买时间(异常),0,保留但标注(不删除)
+customers,customer_id 重复,0,无重复
+products,品类英文名为空,623,填充 'unknown'
+products,product_weight_g 为负(异常),0,置空
+products,product_length_cm 为负(异常),0,置空
+products,product_height_cm 为负(异常),0,置空
+products,product_width_cm 为负(异常),0,置空
+order_items,"(order_id,item_id) 重复",0,删除重复
+order_items,price 缺失或<=0(无效),0,删除
+order_items,freight_value<0(异常),0,删除
+reviews,review_score 缺失,0,删除缺失评分
